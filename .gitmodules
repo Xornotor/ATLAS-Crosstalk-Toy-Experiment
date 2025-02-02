@@ -1,0 +1,3 @@
+[submodule "crosstalk"]
+	path = crosstalk
+	url = https://github.com/mssandes/crosstalk
