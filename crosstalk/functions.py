@@ -146,7 +146,7 @@ def autocorr(x):
     return AutoCorrMatrix
 
 ##===========================================================
-def cellFunction(x, capacitance):
+def cellFunction(x):
     """
     Par(0, g_taud);
     Par(1, g_taupa);
@@ -158,7 +158,7 @@ def cellFunction(x, capacitance):
     g_taupa   =   17.31
     g_td      =  420.00
     g_Rf      =    0.078
-    g_C1      = capacitance
+    g_C1      = 50.0
     par = np.zeros(5)
     par[0], par[1], par[2], par[3], par[4] = g_taud, g_taupa, g_td, g_Rf, g_C1    
 
@@ -1221,7 +1221,7 @@ def timeInfo(time):
 
 ##########################################
 
-def XTalk(x, capacitance=None):
+def XTalk(x):
     """
     From C++:
     Xtalk ->SetParameter(0,g_Cx);
@@ -1234,12 +1234,12 @@ def XTalk(x, capacitance=None):
     """ 
     g_ToNormXtC =   0.02242
     #g_ToNormXtC = 1
-    g_taud      =  15.82 
+    g_taud      =  15.82
     g_taupa     =  17.31 
     g_td        = 420.00 
     g_Rf        =   0.078     
     g_Rin       =   1.20 
-    g_Cx        = capacitance
+    g_Cx        = 47.0
     par = np.zeros(7)
     par[0], par[1], par[2], par[3], par[4], par[5], par[6] = g_Cx, g_Rf, g_Rin, g_taud, g_taupa, g_td, g_ToNormXtC
 
